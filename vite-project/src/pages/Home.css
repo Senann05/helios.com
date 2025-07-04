@@ -1,0 +1,92 @@
+/* home.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* background-color: rgb(255, 251, 233); */
+  background-color:  rgb(250, 236, 210);
+
+}
+
+header {
+  background-color: rgb(7, 66, 7);
+  height: 140px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* H1-i yuxarıda saxlamaq üçün */
+  border-bottom: 3px solid #9f7d0d;
+  position: relative; /* Loqonu buna nəzərən mövqeləndirmək üçün vacibdir! */
+}
+
+header h1 {
+  color: #9f7d0d;
+}
+
+.logo {
+  /* Köhnə stilləri silib yeniləri əlavə edirik */
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Dairə üçün 50% daha standartdır */
+  border: 3px solid #9f7d0d;
+  background-color: #014421;
+  
+  /* Mövqeləndirmə sehrbazlığı */
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%); /* Üfüqi mərkəzləyir və 50% aşağı çəkir */
+}
+
+
+main {
+  /* Loqonun aşağı hissəsi üçün boşluq yaradırıq */
+  margin-top: 95px; /* Loqo hündürlüyünün yarısı + bir az əlavə boşluq */
+}
+
+/* ... qalan stillər olduğu kimi qalır ... */
+
+main > div {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Məhsul kartları */
+main .product-card {
+  border: 2px solid #014421;
+  border-radius: 10px;
+  padding: 12px;
+  width: 200px;
+  background-color: white;
+  box-shadow: 0 4px 4px rgb(139, 138, 138);
+  transition: transform 0.2s ease;
+}
+
+main .product-card:hover {
+  transform: translateY(-10px);
+}
+
+main .product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+main .product-card h3 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+main .product-card p {
+  color: #00c55f;
+  font-weight: bold;
+}
+footer{
+    height: 150px;
+    background-color:#014421;
+}
+footer h2{
+    margin-left: 25px;
+    color: #9f7d0d;
+}
