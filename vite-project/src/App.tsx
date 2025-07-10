@@ -1,12 +1,14 @@
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import ProductDetail from './pages/ProductDetail'
-// import First from './pages/First'
+import About from './pages/about'
+import Contact from './pages/Contact'
 
 function App() {
   return (
     <Routes>
-      {/* <Route path="/first" element={<First />} /> */}
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
       <Route path="/" element={<Home />} />
       <Route path="/product/:id" element={<ProductDetail />} />
     </Routes>

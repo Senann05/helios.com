@@ -1,6 +1,9 @@
 import { useParams, Link } from 'react-router-dom'
 import { products } from '../data/products'
+import { useState } from 'react';
+
 import "./Product.css"
+import blackburger from "../assets/pngwing.com (1).png"
 
 const ProductDetail = () => {
   const { id } = useParams()
@@ -8,13 +11,40 @@ const ProductDetail = () => {
 
   if (!product) return <div className="not-found">Məhsul tapılmadı</div>
 
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
 
   return (
     <div className="product-detail">
       <Link to="/" className="back-link">← Geri</Link>
       
+        <div className="sidebar-menu"
+        style={{
+          position: 'absolute',
+          left: isMenuOpen ? '0' : '-200px',
+          top: '0',
+          width: '200px',
+          height: '100vh',
+          backgroundColor: 'rgba(255, 255, 255, 0.59)',
+          transition: 'left 0.3s ease',
+          zIndex: 1000
+        }}
+      >
+        <div className="divh3" style={{ padding: '20px', color:'black'}}>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+            <Link to="/"><h3>Məhsullarımız</h3></Link>
+            <Link to="/about"><h3>Haqqımızda</h3></Link>
+            <Link to="/contact"><h3>Əlaqə</h3></Link>
+          </ul>
+        </div>
+      </div>
 
+      {isMenuOpen && (
+        <div onClick={toggleMenu}/>
+      )}     <img src={blackburger} className="blackburger" alt="blackburger" onClick={toggleMenu} style={{ cursor: 'pointer' }}/>
       
       <div className="product-all">
         {product.images.map((img, index) => (
@@ -57,10 +87,10 @@ const ProductDetail = () => {
 <div className='other-products'>
   {products.slice(0, 5).map((product) => (
     <div key={product.id} className="other-product">
-      {/* <Link to={`/product/${product.id}`}> */}
+      <Link to={`/product/${product.id}`}>
       <img className="other-image" src={product.images[0]} alt={product.name} />
       <p className="other-p">{product.name}</p>
-      {/* </Link> */}
+      </Link>
 
       <div style={{ display: 'flex', gap: '1px' }}>
         <p className="other-fake">{product.fake} AZN</p>

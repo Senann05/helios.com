@@ -6,7 +6,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #fdf1db;
+  background-color: #f9f4ea;
   min-height: 100vh;
 }
 
@@ -48,6 +48,18 @@
   color: #000000;
   font-weight: bold;
   margin-left: 5px;
+}
+ .blackburger {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 80px;
+  height: 80px;
+  z-index: 1001;
+  cursor: pointer;
+}
+.blackburger:hover{
+  transform:  scale(1.1);
 }
 .product-fake {
   font-size: 1.8em;
@@ -99,7 +111,7 @@
   display: flex;
   gap: 20px;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 45px;
   flex-wrap: wrap;
 }
 

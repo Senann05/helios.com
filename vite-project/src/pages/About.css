@@ -1,0 +1,60 @@
+.aboutus-container {
+  padding: 40px 20px;
+  background-color: #f9f4ea;
+  font-family: 'Segoe UI', sans-serif;
+  color: #014421;
+}
+
+.aboutus-container h1 {
+  text-align: center;
+  margin-top: 1px;
+  margin-bottom: 40px;
+  font-size: 32px;
+  color: #9f7d0d;
+
+}
+.badimcan{
+    background-color: #ffffff;
+    width: 900px;
+    height: 150px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.feedbacknav{
+    display: flex;
+    gap: 20px;
+}
+.feedbackh2{
+    font-size: 40px;
+    color: #9f7d0d;
+}
+
+.aboutus-content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.8;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.aboutus-content p {
+  margin-bottom: 20px;
+}
+
+.aboutus-content strong {
+  color: #014421;
+}
+
+@media screen and (max-width: 768px) {
+  .aboutus-content {
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  .aboutus-container h1 {
+    font-size: 26px;
+  }
+}

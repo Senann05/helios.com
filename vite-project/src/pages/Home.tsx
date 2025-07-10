@@ -6,6 +6,7 @@ import logo from '../assets/Логотип уходовая косметика .
 import background from '../assets/ChatGPT Image 5 Tem 2025 17_50_13.png';
 import hamburger from "../assets/hamburger.png";
 
+
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -17,59 +18,36 @@ const Home = () => {
     <div>
       <header>
         <img src={background} className="background" alt="background" />
-        <img 
-          src={hamburger} 
-          className="hamburger" 
-          alt="hamburger" 
-          onClick={toggleMenu}
-          style={{ cursor: 'pointer' }}
-        />
-        <img src={logo} className="logo" alt="Helios Accessories Logo" />
-      </header>
-
-      {/* Sidebar Menu */}
-      <div 
-        className="sidebar-menu"
+        <div className="sidebar-menu"
         style={{
           position: 'fixed',
-          left: isMenuOpen ? '0' : '-100px',
+          left: isMenuOpen ? '0' : '-200px',
           top: '0',
-          width: '100px',
+          width: '200px',
           height: '100vh',
-          backgroundColor: '#fff',
-          boxShadow: '2px 0 5px rgba(0,0,0,0.1)',
+          backgroundColor: ' rgba(255, 255, 255, 0.59)',
           transition: 'left 0.3s ease',
           zIndex: 1000
         }}
       >
-        {/* Menu content goes here */}
-        <div style={{ padding: '20px' }}>
-          <h3>Menu</h3>
+        <div className="divh3" style={{ padding: '20px', color:'black'}}>
           <ul style={{ listStyle: 'none', padding: 0 }}>
-            <li>Home</li>
-            <li>Products</li>
-            <li>About</li>
-            <li>Contact</li>
+            <Link to="/"><h3>Məhsullarımız</h3></Link>
+            <Link to="/about"><h3>Haqqımızda</h3></Link>
+            <Link to="/contact"><h3>Əlaqə</h3></Link>
           </ul>
         </div>
       </div>
 
-      {/* Overlay when menu is open */}
       {isMenuOpen && (
-        <div 
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: 'rgba(0,0,0,0.5)',
-            zIndex: 999
-          }}
-          onClick={toggleMenu}
-        />
-      )}
+        <div onClick={toggleMenu}/>)}     
+        <img src={hamburger} className="hamburger" alt="hamburger" onClick={toggleMenu} style={{ cursor: 'pointer' }}/>
+        <img src={logo} className="logo" alt="Helios Accessories Logo" />
+      </header>
 
+
+ 
+{/* //////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
       <nav>
         <h1>Məhsullarımız</h1>
       </nav>
