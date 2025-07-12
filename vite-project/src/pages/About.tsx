@@ -34,7 +34,7 @@ const About = () => {
       {isMenuOpen && (
         <div onClick={toggleMenu}/>
       )}     <img src={blackburger} className="blackburger" alt="blackburger" onClick={toggleMenu} style={{ cursor: 'pointer' }}/>
-      <p style={{ textAlign: "center", }}>*Təəssuratlarınız əlaqə bölməsindəki formu dolduraraq bildirməyiniz bizim üçün çox önəmlidir!</p>
+      <p style={{ textAlign: "center", marginTop: 65 }}>*Təəssuratlarınız əlaqə bölməsindəki formu dolduraraq bildirməyiniz bizim üçün çox önəmlidir!</p>
       <nav>
       <h1>Biz Kimik?</h1>
 

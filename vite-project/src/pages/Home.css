@@ -6,7 +6,7 @@ body {
   margin: 0;
   font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   background-color: #f9f4ea;
-  color: #25425e;;
+  color: #25425e;
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -20,7 +20,6 @@ header {
   align-items: flex-start;
   border-bottom: 4px solid #e0ad06;
   position: relative;
-  /* overflow: hidden; */
   z-index: 1;
 }
 
@@ -35,10 +34,12 @@ header::before {
   animation: shimmer 3s ease-in-out infinite;
   z-index: 1;
 }
+
 @keyframes shimmer {
   0%, 100% { transform: translateX(-100%); }
   50% { transform: translateX(100%); }
 }
+
 .background {
   position: absolute;
   top: 0;
@@ -48,17 +49,8 @@ header::before {
   object-fit: cover;
   z-index: 0;
 }
-/* .hamburger{
-  z-index: 5;
-  height: 60px;
-  position: absolute;
-  margin-top: 15px;
-  margin-right: 1410px;
-}
-.hamburger:hover{
-  transform: scale(1.15);
-} */
- .hamburger {
+
+.hamburger {
   position: absolute;
   top: 20px;
   left: 20px;
@@ -67,8 +59,9 @@ header::before {
   z-index: 1001;
   cursor: pointer;
 }
-.hamburger:hover{
-  transform:  scale(1.1);
+
+.hamburger:hover {
+  transform: scale(1.1);
 }
 
 .sidebar-menu {
@@ -78,7 +71,6 @@ header::before {
   width: 100px;
   height: 100vh;
   background-color: #fff;
-  /* box-shadow: 2px 0 5px rgba(0,0,0,0.1); */
   transition: left 0.5s ease;
   z-index: 1000;
 }
@@ -86,6 +78,7 @@ header::before {
 .sidebar-menu.open {
   left: 0;
 }
+
 .logo {
   width: 200px;
   height: 200px;
@@ -98,22 +91,27 @@ header::before {
   transform: translate(-50%, 50%);
   z-index: 2;
 }
+
 .logo:hover {
   transform: translate(-50%, 50%) scale(1.05);
   box-shadow: 0 12px 40px var(--shadow-dark);
 }
-.divh3{
+
+.divh3 {
   margin-top: 65px;
 }
+
 nav {
   margin-top: 75px;
   text-align: center;
   padding: 20px;
 }
-nav h1{
+
+nav h1 {
   font-size: 45px;
   color: #000000;
 }
+
 main {
   margin-top: 30px;
   margin-bottom: 60px;
@@ -158,15 +156,12 @@ main .product-card h3 {
   margin: 10px 0 5px;
 }
 
-/* main .product-card p {
-  color: #00c55f;
-  font-weight: bold;
-} */
 main .product-price {
   color: #000000;
   font-weight: bold;
-    font-size: 20px;
+  font-size: 20px;
 }
+
 main .product-fake {
   font-size: 20px;
   color: #bb6475;
@@ -187,10 +182,12 @@ footer h2 {
 }
 
 /* Mobile Responsive Styles */
+
+/* Tablet styles (768px and below) */
 @media screen and (max-width: 768px) {
   header {
-    height: 300px;
-    padding: 10px 15px;
+    height: 400px;
+    padding: 0 15px;
   }
   
   .logo {
@@ -198,14 +195,13 @@ footer h2 {
     height: 150px;
   }
   
-  nav {
-    margin-top: 50px;
-    padding: 15px;
+  nav h1 {
+    font-size: 35px;
   }
   
-  main {
-    margin-top: 80px;
-    padding-bottom: 30px;
+  nav {
+    margin-top: 60px;
+    padding: 15px;
   }
   
   main > div {
@@ -213,9 +209,8 @@ footer h2 {
   }
   
   main .product-card {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto 20px;
+    width: 180px;
+    padding: 10px;
   }
   
   main .product-card img {
@@ -224,6 +219,94 @@ footer h2 {
   
   main .product-card h3 {
     font-size: 16px;
+  }
+  
+  main .product-price {
+    font-size: 18px;
+  }
+  
+  main .product-fake {
+    font-size: 18px;
+  }
+  
+  .hamburger {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .sidebar-menu {
+    width: 90px;
+    left: -90px;
+  }
+}
+
+/* Mobile styles (480px and below) */
+@media screen and (max-width: 480px) {
+  header {
+    height: 350px;
+    padding: 0 10px;
+  }
+  
+  .logo {
+    width: 120px;
+    height: 120px;
+  }
+  
+  nav h1 {
+    font-size: 28px;
+  }
+  
+  nav {
+    margin-top: 50px;
+    padding: 10px;
+  }
+  
+  .divh3 {
+    margin-top: 50px;
+  }
+  
+  main {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+  }
+  
+  main > div {
+    padding: 0 10px;
+  }
+  
+  main .product-card {
+    width: 160px;
+    padding: 8px;
+  }
+  
+  main .product-card img {
+    height: 160px;
+  }
+  
+  main .product-card h3 {
+    font-size: 14px;
+    margin: 8px 0 4px;
+  }
+  
+  main .product-price {
+    font-size: 16px;
+  }
+  
+  main .product-fake {
+    font-size: 16px;
+  }
+  
+  .hamburger {
+    width: 40px;
+    height: 40px;
+    top: 15px;
+    left: 15px;
+  }
+  
+  .sidebar-menu {
+    width: 80px;
+    left: -80px;
   }
   
   footer {
@@ -236,83 +319,115 @@ footer h2 {
   }
 }
 
-@media screen and (max-width: 480px) {
+/* Extra small mobile styles (320px and below) */
+@media screen and (max-width: 320px) {
   header {
-    height: 250px;
-    padding: 10px;
+    height: 300px;
+    padding: 0 8px;
   }
   
   .logo {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
+  }
+  
+  nav h1 {
+    font-size: 24px;
   }
   
   nav {
     margin-top: 40px;
-    padding: 10px;
+    padding: 8px;
+  }
+  
+  .divh3 {
+    margin-top: 40px;
   }
   
   main {
-    margin-top: 60px;
+    margin-top: 15px;
+    margin-bottom: 30px;
     padding-bottom: 20px;
   }
   
   main > div {
-    padding: 0 10px;
+    padding: 0 8px;
   }
   
   main .product-card {
-    width: 100%;
-    max-width: 280px;
-    padding: 10px;
-    margin: 0 auto 15px;
+    width: 140px;
+    padding: 6px;
   }
   
   main .product-card img {
-    height: 160px;
+    height: 140px;
   }
   
   main .product-card h3 {
-    font-size: 15px;
-    margin: 8px 0 4px;
+    font-size: 12px;
+    margin: 6px 0 3px;
   }
   
-  main .product-card p {
+  main .product-price {
     font-size: 14px;
+  }
+  
+  main .product-fake {
+    font-size: 14px;
+  }
+  
+  .hamburger {
+    width: 35px;
+    height: 35px;
+    top: 12px;
+    left: 12px;
+  }
+  
+  .sidebar-menu {
+    width: 70px;
+    left: -70px;
   }
   
   footer {
     min-height: 100px;
-    padding: 10px;
+    padding: 12px;
   }
   
   footer h2 {
     font-size: 0.8em;
-    margin: 8px 0;
   }
 }
 
-/* Product Grid Layout for Mobile */
+/* Product grid responsiveness */
+@media screen and (max-width: 1200px) {
+  main .product-card {
+    margin: 10px;
+  }
+}
+
 @media screen and (max-width: 768px) {
-  .product-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+  main .product-card {
+    margin: 8px;
   }
 }
 
-/* For screens between 480px and 768px, you can show 2 products per row */
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .product-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    justify-items: center;
+@media screen and (max-width: 480px) {
+  main .product-card {
+    margin: 6px;
+  }
+}
+
+/* Hover effects adjustment for mobile */
+@media (hover: none) {
+  .hamburger:hover {
+    transform: none;
   }
   
-  main .product-card {
-    width: 100%;
-    max-width: 180px;
+  .logo:hover {
+    transform: translate(-50%, 50%);
+  }
+  
+  main .product-card:hover {
+    transform: none;
   }
 }

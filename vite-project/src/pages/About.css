@@ -11,22 +11,25 @@
   margin-bottom: 40px;
   font-size: 32px;
   color: #9f7d0d;
+}
 
+.badimcan {
+  background-color: #ffffff;
+  width: 900px;
+  height: 150px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 0 auto;
 }
-.badimcan{
-    background-color: #ffffff;
-    width: 900px;
-    height: 150px;
-    border: 1px solid black;
-    border-radius: 10px;
+
+.feedbacknav {
+  display: flex;
+  gap: 20px;
 }
-.feedbacknav{
-    display: flex;
-    gap: 20px;
-}
-.feedbackh2{
-    font-size: 40px;
-    color: #9f7d0d;
+
+.feedbackh2 {
+  font-size: 40px;
+  color: #9f7d0d;
 }
 
 .aboutus-content {
@@ -49,12 +52,90 @@
 }
 
 @media screen and (max-width: 768px) {
+  .aboutus-container {
+    padding: 30px 15px;
+  }
+  
+  .aboutus-container h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .badimcan {
+    width: 100%;
+    max-width: 500px;
+    height: 120px;
+  }
+  
+  .feedbacknav {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .feedbackh2 {
+    font-size: 32px;
+    text-align: center;
+  }
+  
   .aboutus-content {
-    padding: 20px;
+    max-width: 100%;
+    padding: 25px;
     font-size: 16px;
   }
+}
 
+@media screen and (max-width: 480px) {
+  .aboutus-container {
+    padding: 20px 10px;
+  }
+  
   .aboutus-container h1 {
-    font-size: 26px;
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+  
+  .badimcan {
+    width: 100%;
+    height: 100px;
+  }
+  
+  .feedbackh2 {
+    font-size: 28px;
+  }
+  
+  .aboutus-content {
+    padding: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  
+  .aboutus-content p {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .aboutus-container {
+    padding: 15px 8px;
+  }
+  
+  .aboutus-container h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .badimcan {
+    width: 100%;
+    height: 80px;
+  }
+  
+  .feedbackh2 {
+    font-size: 24px;
+  }
+  
+  .aboutus-content {
+    padding: 15px;
+    font-size: 14px;
   }
 }
