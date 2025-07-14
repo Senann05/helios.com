@@ -55,6 +55,10 @@ const ProductDetail = () => {
     11: [luckandlight ,luck, light]
   };
 
+  // Sayfa yüklendiğinde en üste git
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]); // id değiştiğinde de tetiklenmesi için
 
   const images = product ? productImages[product.id] || [] : [];
 
@@ -277,7 +281,7 @@ const ProductDetail = () => {
 
       <h2>Digər Məhsullarımız</h2>
       <div className='other-products'>
-        {products.slice(0, 5).map((product) => (
+        {products.slice(0, 10).map((product) => (
           <div key={product.id} className="other-product">
             <Link to={`/product/${product.id}`}>
               <img className="other-image" src={productImages[product.id][0]} alt={product.name} />
