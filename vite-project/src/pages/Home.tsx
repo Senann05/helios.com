@@ -62,7 +62,37 @@ const Home = () => {
               justifyContent: 'center',
             }}
           >
-            {products.map((product) => (
+            {products.filter(product => product.id < 11).map((product) => (
+              <div key={product.id} className="product-card">
+                <Link to={`/product/${product.id}`}>
+                  <img src={product.images[0]} alt={product.name} />
+                  <h3>{product.name}</h3>
+                </Link>
+                <div style={{ display: 'flex', gap: '1px' }}>
+                  <p className="product-fake">{product.fake} AZN</p>
+                  <p className="product-price">{product.price} AZN</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </main>
+
+      <main>
+        <nav>
+        <h1>Təkliflərimiz</h1>
+        </nav>
+
+        <div style={{ padding: '0 20px' }}>
+          <div
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: '20px',
+              justifyContent: 'center',
+            }}
+          >
+            {products.filter(product => product.id > 10).map((product) => (
               <div key={product.id} className="product-card">
                 <Link to={`/product/${product.id}`}>
                   <img src={product.images[0]} alt={product.name} />

@@ -55,6 +55,17 @@ const About = () => {
       </div>
       </nav>
 
+            <nav>
+      <h1>Çatdırılma!</h1>
+
+      <div className="aboutus-content">
+        <p>
+          İnşaatçılar, Elmlər və 28May metro stansiyalarına <strong>ödənişsiz</strong> çatdırılma edirik. Ünvana çatdırlma xidmetimiz bolt və uber vasitəsi <strong>tətbiqin təyin etdiyi</strong> ödəniş edildikdən sonra həyata keçirilir.Məhsul sayından və dəyərindən asılı olaraq digər stansiyalara da ödənişsiz catdırılma həyata keçirilə bilər.
+        </p>
+
+      </div>
+      </nav>
+
 
       <nav >
         <h2 className='feedbackh2'>Sizin Təəssuratlarınız:</h2>

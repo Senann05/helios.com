@@ -3,11 +3,37 @@ import { products } from '../data/products'
 import { useState, useRef, useEffect } from 'react';
 import "./Product.css"
 import blackburger from "../assets/pngwing.com (1).png"
-import proimg from "../assets/85022_1.jpg"
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+import interstaller1 from "../data assets/interstaller6.png"
+import interstaller2 from "../data assets/interstaller5.png"
+import interstaller3 from "../data assets/interstaller1.jpg"
+import shimmerfly1 from "../data assets/shimmerfly1.png"
+import shimmerfly2 from "../data assets/shimmerfly2.jpg"
+import independence1 from "../data assets/independence1.png"
+import independence2 from "../data assets/independence2.png"
+import swanlight1 from "../data assets/swanlight4.png"
+import swanlight3 from "../data assets/swanlight0.jpg"
+import elegance1 from "../data assets/elegance1.jpg"
+import elegance2 from "../data assets/elegance2.jpg"
+import elegance3 from "../data assets/elegance4.jpg"
+import luck from "../data assets/luck2.png"
+import light from "../data assets/light2.png"
+import eleganceduo1 from "../data assets/eleganceduo1.png"
+import eleganceduo2 from "../data assets/eleganceduo2.jpg"
+import wings1 from "../data assets/wings1.jpg"
+import wings2 from "../data assets/wings2.png"
+import wings3 from "../data assets/wings3.png"
+import serenity1 from "../data assets/serenity1.png"
+import serenity2 from "../data assets/sereniyt2.jpg"
+import serenity3 from "../data assets/serenity3.jpg"
+import luckandlight from "../data assets/luckandlight.png"
+// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 const ProductDetail = () => {
   const { id } = useParams()
   const product = products.find(p => p.id === Number(id))
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const sliderRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
@@ -15,10 +41,22 @@ const ProductDetail = () => {
   const [scrollLeft, setScrollLeft] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  if (!product) return <div className="not-found">Məhsul tapılmadı</div>
+  const productImages: Record<number, string[]> = {
+    1: [interstaller1, interstaller2,interstaller3],
+    2: [shimmerfly1, shimmerfly2],
+    3: [independence1, independence2],
+    4: [swanlight1, swanlight3],
+    5: [elegance1, elegance2, elegance3],
+    6: [luck],
+    7: [light],
+    8: [eleganceduo1, eleganceduo2],
+    9: [wings1, wings2, wings3],
+    10: [serenity1, serenity2, serenity3],
+    11: [luckandlight ,luck, light]
+  };
 
-  // 3 aynı resim kullanıyoruz
-  const images = [proimg, blackburger, proimg];
+
+  const images = product ? productImages[product.id] || [] : [];
 
   const goToPrevious = () => {
     const isFirstShape = currentIndex === 0;
@@ -166,6 +204,7 @@ const ProductDetail = () => {
                   src={img}
                   alt={`Şəkil ${index + 1}`}
                   style={{
+                    marginTop: '110px',
                     width: '100%',
                     maxHeight: '400px',
                     objectFit: 'contain'
@@ -210,13 +249,13 @@ const ProductDetail = () => {
         </div>
         
         <div> 
-          <h2 className="product-title">{product.name}</h2>
+          <h2 className="product-title">{product?.name}</h2>
           <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-            <p className="product-fake-pd">{product.fake} AZN</p>
-            <p className="product-price">{product.price} AZN</p>
+            <p className="product-fake-pd">{product?.fake} AZN</p>
+            <p className="product-price">{product?.price} AZN</p>
           </div> 
           <div>
-            {product.description.split("/").map((word, index) => (
+            {product?.description.split("/").map((word, index) => (
               <p key={index} style={{ margin: '2px 0' }}>{word}</p>
             ))}
           </div>
@@ -227,7 +266,7 @@ const ProductDetail = () => {
                 Instagram
               </button>
             </a>
-            <a href="https://wa.me/994503924762" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/994558555105" target="_blank" rel="noopener noreferrer">
               <button className="contact-button whatsapp-button">
                 WhatsApp
               </button>
@@ -241,7 +280,7 @@ const ProductDetail = () => {
         {products.slice(0, 5).map((product) => (
           <div key={product.id} className="other-product">
             <Link to={`/product/${product.id}`}>
-              <img className="other-image" src={product.images[0]} alt={product.name} />
+              <img className="other-image" src={productImages[product.id][0]} alt={product.name} />
               <p className="other-p">{product.name}</p>
             </Link>
             <div style={{ display: 'flex', gap: '1px' }}>

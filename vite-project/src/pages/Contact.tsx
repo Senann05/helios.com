@@ -41,7 +41,7 @@ const Contact = () => {
           <p><strong>Telefon:</strong> +994 50 392 47 62</p>
           <p><strong>Email:</strong> helios.accessories@gmail.com</p>
           <p><strong>Instagram:</strong> <a href="https://www.instagram.com/helios.accessories" target="_blank" rel="noopener noreferrer">@helios.accessories</a></p>
-          <p><strong>WhatsApp:</strong> <a href="https://wa.me/994503924762" target="_blank" rel="noopener noreferrer">Mesaj göndər</a></p>
+          <p><strong>WhatsApp:</strong> <a href="https://wa.me/994558555105" target="_blank" rel="noopener noreferrer">Mesaj göndər</a></p>
         </div>
 
         <form className="contact-form">
