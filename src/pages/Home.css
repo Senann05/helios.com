@@ -182,242 +182,143 @@ footer h2 {
   margin: 10px 0;
   font-size: 1em;
 }
-
-/* Mobile Responsive Styles */
-
-/* Tablet styles (768px and below) */
+/* Mobile Responsive */
 @media screen and (max-width: 768px) {
-  header {
-    height: 400px;
-    padding: 0 15px;
+  body {
+    font-size: 14px;
   }
-  
-  .logo {
-    width: 150px;
-    height: 150px;
-  }
-  
-  nav h1 {
-    font-size: 35px;
-  }
-  
-  nav {
-    margin-top: 60px;
-    padding: 15px;
-  }
-  
-  main > div {
-    padding: 0 15px;
-  }
-  
-  main .product-card {
-    width: 180px;
-    padding: 10px;
-  }
-  
-  main .product-card img {
-    height: 180px;
-  }
-  
-  main .product-card h3 {
-    font-size: 16px;
-  }
-  
-  main .product-price {
-    font-size: 18px;
-  }
-  
-  main .product-fake {
-    font-size: 18px;
-  }
-  
-  .hamburger {
-    width: 45px;
-    height: 45px;
-  }
-  
-  .sidebar-menu {
-    width: 90px;
-    left: -90px;
-  }
-}
 
-/* Mobile styles (480px and below) */
-@media screen and (max-width: 480px) {
   header {
     height: 350px;
     padding: 0 10px;
   }
-  
+
+  .hamburger {
+    width: 45px;
+    height: 45px;
+  }
+
   .logo {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
   }
-  
-  nav h1 {
-    font-size: 28px;
+
+  .divh3 {
+    margin-top: 45px;
   }
-  
+
   nav {
-    margin-top: 50px;
+    margin-top: 55px;
     padding: 10px;
   }
-  
-  .divh3 {
-    margin-top: 50px;
+
+  nav h1 {
+    font-size: 1.8em;
   }
-  
+
   main {
     margin-top: 20px;
     margin-bottom: 40px;
-    padding-bottom: 30px;
   }
-  
+
   main > div {
-    padding: 0 10px;
+    padding: 0 15px;
   }
-  
+
   main .product-card {
     width: 160px;
     padding: 8px;
   }
-  
+
   main .product-card img {
     height: 160px;
   }
-  
+
   main .product-card h3 {
-    font-size: 14px;
-    margin: 8px 0 4px;
-  }
-  
-  main .product-price {
     font-size: 16px;
   }
-  
+
+  main .product-price,
   main .product-fake {
     font-size: 16px;
   }
-  
-  .hamburger {
-    width: 40px;
-    height: 40px;
-    top: 15px;
-    left: 15px;
-  }
-  
-  .sidebar-menu {
-    width: 80px;
-    left: -80px;
-  }
-  
+
   footer {
-    min-height: 120px;
     padding: 15px;
-  }
-  
-  footer h2 {
-    font-size: 0.9em;
-  }
-}
-
-/* Extra small mobile styles (320px and below) */
-@media screen and (max-width: 320px) {
-  header {
-    height: 300px;
-    padding: 0 8px;
-  }
-  
-  .logo {
-    width: 100px;
-    height: 100px;
-  }
-  
-  nav h1 {
-    font-size: 24px;
-  }
-  
-  nav {
-    margin-top: 40px;
-    padding: 8px;
-  }
-  
-  .divh3 {
-    margin-top: 40px;
-  }
-  
-  main {
-    margin-top: 15px;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-  }
-  
-  main > div {
-    padding: 0 8px;
-  }
-  
-  main .product-card {
-    width: 140px;
-    padding: 6px;
-  }
-  
-  main .product-card img {
-    height: 140px;
-  }
-  
-  main .product-card h3 {
-    font-size: 12px;
-    margin: 6px 0 3px;
-  }
-  
-  main .product-price {
-    font-size: 14px;
-  }
-  
-  main .product-fake {
-    font-size: 14px;
-  }
-  
-  .hamburger {
-    width: 35px;
-    height: 35px;
-    top: 12px;
-    left: 12px;
-  }
-  
-  .sidebar-menu {
-    width: 70px;
-    left: -70px;
-  }
-  
-  footer {
-    min-height: 100px;
-    padding: 12px;
-  }
-  
-  footer h2 {
-    font-size: 0.8em;
-  }
-}
-
-/* Product grid responsiveness */
-@media screen and (max-width: 1200px) {
-  main .product-card {
-    margin: 10px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  main .product-card {
-    margin: 8px;
   }
 }
 
 @media screen and (max-width: 480px) {
+  header {
+    height: 300px;
+  }
+
+  .hamburger {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .background {
+    left: -25%;
+    width: 125%; 
+  }
+
+  .logo {
+    width: 120px;
+    height: 120px;
+  }
+
+  nav h1 {
+    font-size: 1.5em;
+  }
+
   main .product-card {
-    margin: 6px;
+    width: 140px;
+  }
+
+  main .product-card img {
+    height: 140px;
+  }
+
+  main .product-card h3 {
+    font-size: 14px;
+    margin: 8px 0 4px;
+  }
+
+  main .product-price,
+  main .product-fake {
+    font-size: 14px;
+  }
+
+  .sidebar-menu {
+    left: -80px;
+    width: 80px;
   }
 }
+
+@media screen and (max-width: 360px) {
+  header {
+    height: 250px;
+  }
+
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  nav h1 {
+    font-size: 1.3em;
+  }
+
+  main .product-card {
+    width: 120px;
+  }
+
+  main .product-card img {
+    height: 120px;
+  }
+}
+
 
 /* Hover effects adjustment for mobile */
 @media (hover: none) {
@@ -432,4 +333,4 @@ footer h2 {
   main .product-card:hover {
     transform: none;
   }
-}
+} 

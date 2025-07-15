@@ -55,10 +55,10 @@ const ProductDetail = () => {
     11: [luckandlight ,luck, light]
   };
 
-  // Sayfa yüklendiğinde en üste git
+
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [id]); // id değiştiğinde de tetiklenmesi için
+  }, [id]); 
 
   const images = product ? productImages[product.id] || [] : [];
 
