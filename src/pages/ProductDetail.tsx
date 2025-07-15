@@ -55,7 +55,6 @@ const ProductDetail = () => {
     11: [luckandlight ,luck, light]
   };
 
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id]); 
@@ -72,6 +71,10 @@ const ProductDetail = () => {
     const isLastShape = currentIndex === images.length - 1;
     const newIndex = isLastShape ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
   };
 
   const handleMouseDown = (e: React.MouseEvent) => {
@@ -153,35 +156,44 @@ const ProductDetail = () => {
       <img src={blackburger} className="blackburger" alt="blackburger" onClick={toggleMenu} style={{ cursor: 'pointer' }}/>
       
       <div className="product-all">
-        {/* Slider kısmı */}
+        {/* Slider section */}
         <div className="slider-container" style={{ position: 'relative', marginBottom: '20px' }}>
+          {/* Left Arrow */}
           <button 
-            className="slider-arrow" 
+            className="left-arrow" 
             onClick={goToPrevious}
             style={{ 
               position: 'absolute', 
-              left: '10px', 
+              left: '20px', 
               top: '50%', 
               transform: 'translateY(-50%)',
-              background: 'rgba(0, 0, 0, 0.5)',
-              color: 'white',
+              background: 'rgba(255, 255, 255, 0.7)',
+              color: '#333',
               border: 'none',
-              padding: '10px 15px',
-              fontSize: '18px',
-              cursor: 'pointer',
+              width: '40px',
+              height: '40px',
               borderRadius: '50%',
-              zIndex: '10'
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              cursor: 'pointer',
+              zIndex: '10',
+              boxShadow: '0 2px 5px rgba(0,0,0,0.2)',
+              transition: 'all 0.3s ease'
             }}
           >
-            &larr;
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
           </button>
           
+          {/* Slider */}
           <div 
             ref={sliderRef}
             className="slider"
             style={{
               display: 'flex',
-              overflowX: 'scroll',
+              overflowX: 'hidden',
               scrollSnapType: 'x mandatory',
               scrollBehavior: 'smooth',
               WebkitOverflowScrolling: 'touch',
@@ -218,37 +230,63 @@ const ProductDetail = () => {
             ))}
           </div>
           
+          {/* Right Arrow */}
           <button 
-            className="slider-arrow" 
+            className="right-arrow" 
             onClick={goToNext}
             style={{ 
               position: 'absolute', 
-              right: '10px', 
+              right: '20px', 
               top: '50%', 
               transform: 'translateY(-50%)',
-              background: 'rgba(0, 0, 0, 0.5)',
-              color: 'white',
+              background: 'rgba(255, 255, 255, 0.7)',
+              color: '#333',
               border: 'none',
-              padding: '10px 15px',
-              fontSize: '18px',
-              cursor: 'pointer',
+              width: '40px',
+              height: '40px',
               borderRadius: '50%',
-              zIndex: '10'
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              cursor: 'pointer',
+              zIndex: '10',
+              boxShadow: '0 2px 5px rgba(0,0,0,0.2)',
+              transition: 'all 0.3s ease'
             }}
           >
-            &rarr;
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
           </button>
           
+          {/* Dot Indicators */}
           <div 
-            className="slider-indicator"
+            className="slider-dots"
             style={{
-              textAlign: 'center',
-              marginTop: '10px',
-              fontSize: '18px',
-              color: '#333'
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: '8px',
+              marginTop: '15px'
             }}
           >
-            {currentIndex + 1}/{images.length}
+            {images.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                style={{
+                  width: index === currentIndex ? '12px' : '8px',
+                  height: index === currentIndex ? '12px' : '8px',
+                  borderRadius: '50%',
+                  border: 'none',
+                  backgroundColor: index === currentIndex ? '#333' : '#ccc',
+                  cursor: 'pointer',
+                  padding: 0,
+                  transition: 'all 0.3s ease'
+                }}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
         
