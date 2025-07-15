@@ -90,7 +90,7 @@ export const products: Product[] = [
     name: "Twinkle Wings",
     price: 8,
     fake: 10,
-    description: "🦋 Qanadlı zəriflik – barmaqlarınızda!/Parlaq daşlarla bəzədilmiş bu kəpənək qanadlı üzük romantikanın və azadlığın simvoludur. Tənzimlənə bilən ölçüsü ilə hər kəs üçün uyğundur ✨/💍 Parlaq daşlı kəpənək dizaynı/💍 Gümüş tonlu, paslanmayan və allergiya yaratmayan material/💍 Tənzimlənən ölçü – hədiyyə üçün də ideal seçim/📦 Sifariş üçün DM 📩/📍 Bakı və bölgələrə çatdırılma mövcuddur 🚚",
+    description: "🦋 Qanadlı zəriflik – barmaqlarınızda!/Parlaq daşlarla bəzədilmiş bu kəpənək qanadlı üzük romantikanın və azadlığın simvoludur. Tənzimlənə bilən ölçüsü ilə hər kəs üçün uyğundur ✨/💍 Parlaq daşlı kəpənək dizaynı/💍 Gümüş tonlu, paslanmayan və allergiya yaratmayan material/💍 Tənzimlənən ölçü – hədiyyə üçün də ideal seçim/📦 Sifariş üçün DM 📩/📍 Çatdırılma: Metrolara",
     images: [wings1]
   },
     {
@@ -98,7 +98,7 @@ export const products: Product[] = [
     name: "Serenity",
     price: 8,
     fake: 10,
-    description: "Minimalist gümüş rəngli üzük, gündəlik istifadə üçün ideal.",
+    description: "💍 Zərifliyin qızılı və incə harmoniyası!/İki tonlu, incə və zərif bu açıq dizaynlı üzük – sadəliyin modern parıltısıdır. Qızılı detallarla çərçivələnmiş incə ağ xətt dizaynı ilə gündəlik stilinizə fərqli bir elegans qatacaq./✨ Minimalist ruh, maksimal təsir!/💫 Qızılı və inci-ağ tonların zərif kombinasiyası/💫 Dəriyə uyğun, allergiya yaratmayan material/💫 Ayarlanabilir ölçü – rahat və universal istifadə üçün/💖 Özünüzə və ya sevdiklərinizə hədiyyə etmək üçün mükəmməl bir seçimdir./📦 Sifariş üçün DM 📩/📍 Çatdırılma: Metrolara",
     images: [serenity1]
   },
     {
