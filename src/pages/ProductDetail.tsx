@@ -169,7 +169,7 @@ const ProductDetail = () => {
   <Link to="/about"><h3 style={{color: '#0e4695ff'}}>Haqqımızda</h3></Link>
   <Link to="/contact"><h3 style={{ color:  '#0e4695ff'}}>Əlaqə</h3></Link>
 </ul>
-        </div>
+      </div>
       </div>
 
       {isMenuOpen && (
