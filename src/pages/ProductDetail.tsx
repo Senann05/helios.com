@@ -164,11 +164,11 @@ const ProductDetail = () => {
         }}
       >
         <div className="divh3" style={{ padding: '20px', color:'black'}}>
-          <ul style={{ listStyle: 'none', padding: 0 }}>
-            <Link to="/"><h3>Məhsullarımız</h3></Link>
-            <Link to="/about"><h3>Haqqımızda</h3></Link>
-            <Link to="/contact"><h3>Əlaqə</h3></Link>
-          </ul>
+<ul style={{ listStyle: 'none', padding: 0 }}>
+  <Link to="/"><h3 style={{color: '#0e4695ff'}}>Məhsullarımız</h3></Link>
+  <Link to="/about"><h3 style={{color: '#0e4695ff'}}>Haqqımızda</h3></Link>
+  <Link to="/contact"><h3 style={{ color:  '#0e4695ff'}}>Əlaqə</h3></Link>
+</ul>
         </div>
       </div>
 
@@ -346,10 +346,10 @@ const ProductDetail = () => {
       <div className='other-products'>
         {products.slice(0, 10).map((product) => (
           <div key={product.id} className="other-product">
-            {/* <Link to={`/product/${product.id}`}> */}
-              <img className="other-image" src={productImages[product.id][0]} alt={product.name} />
-              <p className="other-p">{product.name}</p>
-            {/* </Link> */}
+            <Link to={`/product/${product.id}`}>
+              <img className="other-image" src={productImages[product.id][0]} alt={product.name} /> 
+            </Link>
+            <p className="other-p">{product.name}</p>
             <div style={{ display: 'flex', gap: '1px', justifyContent: 'center' }}>
               <p className="other-fake">{product.fake} AZN</p>
               <p className="other-price">{product.price} AZN</p>

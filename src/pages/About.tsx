@@ -23,11 +23,11 @@ const About = () => {
         }}
       >
         <div className="divh3" style={{ padding: '20px', color:'black'}}>
-          <ul style={{ listStyle: 'none', padding: 0 }}>
-            <Link to="/"><h3>Məhsullarımız</h3></Link>
-            <Link to="/about"><h3>Haqqımızda</h3></Link>
-            <Link to="/contact"><h3>Əlaqə</h3></Link>
-          </ul>
+<ul style={{ listStyle: 'none', padding: 0 }}>
+  <Link to="/"><h3 style={{color: '#0e4695ff'}}>Məhsullarımız</h3></Link>
+  <h3 style={{color: '#506e97ff'}}>Haqqımızda</h3>
+  <Link to="/contact"><h3 style={{ color: '#0e4695ff' }}>Əlaqə</h3></Link>
+</ul>
         </div>
       </div>
 
