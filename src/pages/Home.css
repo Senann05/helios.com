@@ -177,7 +177,7 @@ main > div {
 
 /* FAKE qiymət – düzəldilmiş */
 .product-fake {
-  font-size: 20px;
+  font-size: 17px;
   color: #bb6475;
   position: relative;
   display: inline-block;
@@ -321,7 +321,7 @@ footer h2 {
 
   .product-price,
   .product-fake {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .sidebar-menu {
