@@ -66,7 +66,7 @@ export const products: Product[] = [
     name: "Luck",
     price: 10,
     fake: 12,
-    description: "🌟 Ulduzların parlaqlığını biləyinizdə daşıyın!/Zərif qızıl tonlu zəncir və parlaq ulduz fiqurları ilə hazırlanmış bu bilərzik gündəlik tərzinizə romantik və incə bir toxunuş qatacaq ✨/💫 Parlaq ulduz fiqurlu daşlar/💫 Qızıl tonlu, allergiya yaratmayan material/💫 Tənzimlənə bilən uzunluq – istənilən biləyə uyğun/📦 Sifariş üçün DM 📩/📍 Bakı və bölgələrə çatdırılma mövcuddur 🚚",
+    description: "🌟 Ulduzların parlaqlığını biləyinizdə daşıyın!/Zərif qızıl tonlu zəncir və parlaq ulduz fiqurları ilə hazırlanmış bu bilərzik gündəlik tərzinizə romantik və incə bir toxunuş qatacaq ✨/💫 Parlaq ulduz fiqurlu daşlar/💫 Qızıl tonlu, allergiya yaratmayan material/💫 Tənzimlənə bilən uzunluq – istənilən biləyə uyğun/📦 Sifariş üçün DM 📩/📍📍 Çatdırılma: Metrolara 🚚",
     images: [luck]
   },
     {
@@ -74,7 +74,7 @@ export const products: Product[] = [
     name: "Light",
     price: 10,
     fake: 12,
-    description: "🌟 Ulduzların parlaqlığını biləyinizdə daşıyın!/Zərif qızıl tonlu zəncir və parlaq ulduz fiqurları ilə hazırlanmış bu bilərzik gündəlik tərzinizə romantik və incə bir toxunuş qatacaq ✨/💫 Parlaq ulduz fiqurlu daşlar/💫 Qızıl tonlu, allergiya yaratmayan material/💫 Tənzimlənə bilən uzunluq – istənilən biləyə uyğun/📦 Sifariş üçün DM 📩/📍 Bakı və bölgələrə çatdırılma mövcuddur 🚚",
+    description: "🌟 Ulduzların parlaqlığını biləyinizdə daşıyın!/Zərif qızıl tonlu zəncir və parlaq ulduz fiqurları ilə hazırlanmış bu bilərzik gündəlik tərzinizə romantik və incə bir toxunuş qatacaq ✨/💫 Parlaq ulduz fiqurlu daşlar/💫 Qızıl tonlu, allergiya yaratmayan material/💫 Tənzimlənə bilən uzunluq – istənilən biləyə uyğun/📦 Sifariş üçün DM 📩/📍 📍 Çatdırılma: Metrolara 🚚",
     images: [light]
   },
     {

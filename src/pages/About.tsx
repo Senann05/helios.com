@@ -60,7 +60,7 @@ const About = () => {
 
       <div className="aboutus-content">
         <p>
-          İnşaatçılar, Elmlər və 28May metro stansiyalarına <strong>ödənişsiz</strong> çatdırılma edirik. Ünvana çatdırlma xidmətimiz bolt və uber vasitəsi <strong>tətbiqin təyin etdiyi</strong> ödəniş edildikdən sonra həyata keçirilir.Məhsul sayından və dəyərindən asılı olaraq digər stansiyalara da ödənişsiz catdırılma həyata keçirilə bilər.
+          İnşaatçılar, Elmlər və 28May metro stansiyalarına <strong>ödənişsiz</strong> çatdırılma edirik. Ünvana çatdırlma xidmətimiz bolt və uber vasitəsi ilə <strong>tətbiqin təyin etdiyi</strong> ödəniş edildikdən sonra həyata keçirilir.Məhsul sayından və dəyərindən asılı olaraq digər stansiyalara da ödənişsiz çatdırılma həyata keçirilə bilər.
         </p>
 
       </div>

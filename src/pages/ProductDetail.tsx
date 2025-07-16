@@ -28,7 +28,7 @@ import serenity1 from "../data assets/serenity1.png"
 import serenity2 from "../data assets/sereniyt2.jpg"
 import serenity3 from "../data assets/serenity3.jpg"
 import luckandlight from "../data assets/luckandlight.png"
-// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 const ProductDetail = () => {
   const { id } = useParams()
@@ -65,16 +65,28 @@ const ProductDetail = () => {
     const isFirstShape = currentIndex === 0;
     const newIndex = isFirstShape ? images.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
+    scrollToIndex(newIndex);
   };
 
   const goToNext = () => {
     const isLastShape = currentIndex === images.length - 1;
     const newIndex = isLastShape ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
+    scrollToIndex(newIndex);
+  };
+
+  const scrollToIndex = (index: number) => {
+    if (sliderRef.current) {
+      sliderRef.current.scrollTo({
+        left: sliderRef.current.offsetWidth * index,
+        behavior: 'smooth'
+      });
+    }
   };
 
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
+    scrollToIndex(index);
   };
 
   const handleMouseDown = (e: React.MouseEvent) => {
@@ -99,6 +111,25 @@ const ProductDetail = () => {
     sliderRef.current.scrollLeft = scrollLeft - walk;
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    const touch = e.touches[0];
+    setIsDragging(true);
+    setStartX(touch.pageX - (sliderRef.current?.offsetLeft || 0));
+    setScrollLeft(sliderRef.current?.scrollLeft || 0);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isDragging || !sliderRef.current) return;
+    const touch = e.touches[0];
+    const x = touch.pageX - (sliderRef.current.offsetLeft || 0);
+    const walk = (x - startX) * 2;
+    sliderRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+  };
+
   useEffect(() => {
     const slider = sliderRef.current;
     if (!slider) return;
@@ -112,15 +143,6 @@ const ProductDetail = () => {
 
     slider.addEventListener('scroll', handleScroll);
     return () => slider.removeEventListener('scroll', handleScroll);
-  }, [currentIndex]);
-
-  useEffect(() => {
-    if (sliderRef.current) {
-      sliderRef.current.scrollTo({
-        left: currentIndex * sliderRef.current.offsetWidth,
-        behavior: 'smooth'
-      });
-    }
   }, [currentIndex]);
 
   const toggleMenu = () => {
@@ -203,6 +225,9 @@ const ProductDetail = () => {
             onMouseLeave={handleMouseLeave}
             onMouseUp={handleMouseUp}
             onMouseMove={handleMouseMove}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
           >
             {images.map((img, index) => (
               <div 
@@ -292,7 +317,7 @@ const ProductDetail = () => {
         
         <div> 
           <h2 className="product-title">{product?.name}</h2>
-          <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+          <div style={{ display: 'flex', gap: '10px', alignItems: 'center', justifyContent: 'center' }}>
             <p className="product-fake-pd">{product?.fake} AZN</p>
             <p className="product-price">{product?.price} AZN</p>
           </div> 
@@ -321,11 +346,11 @@ const ProductDetail = () => {
       <div className='other-products'>
         {products.slice(0, 10).map((product) => (
           <div key={product.id} className="other-product">
-            <Link to={`/product/${product.id}`}>
+            {/* <Link to={`/product/${product.id}`}> */}
               <img className="other-image" src={productImages[product.id][0]} alt={product.name} />
               <p className="other-p">{product.name}</p>
-            </Link>
-            <div style={{ display: 'flex', gap: '1px' }}>
+            {/* </Link> */}
+            <div style={{ display: 'flex', gap: '1px', justifyContent: 'center' }}>
               <p className="other-fake">{product.fake} AZN</p>
               <p className="other-price">{product.price} AZN</p>
             </div>
