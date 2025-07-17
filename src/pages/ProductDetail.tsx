@@ -4,31 +4,47 @@ import { useState, useRef, useEffect } from 'react';
 import "./Product.css"
 import blackburger from "../assets/pngwing.com (1).png"
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
-import interstaller1 from "../data assets/interstaller6.png"
-import interstaller2 from "../data assets/interstaller5.png"
-import interstaller3 from "../data assets/interstaller1.jpg"
-import shimmerfly1 from "../data assets/shimmerfly1.png"
-import shimmerfly2 from "../data assets/shimmerfly2.jpg"
-import independence1 from "../data assets/independence1.png"
-import independence2 from "../data assets/independence2.png"
-import swanlight1 from "../data assets/swanlight4.png"
-import swanlight3 from "../data assets/swanlight0.jpg"
-import elegance1 from "../data assets/elegance1.jpg"
-import elegance2 from "../data assets/elegance2.jpg"
-import elegance3 from "../data assets/elegance4.jpg"
-import luck from "../data assets/luck2.png"
-import light from "../data assets/light2.png"
-import eleganceduo1 from "../data assets/eleganceduo1.png"
-import eleganceduo2 from "../data assets/eleganceduo2.jpg"
-import wings1 from "../data assets/wings1.jpg"
-import wings2 from "../data assets/wings2.png"
-import wings3 from "../data assets/wings3.png"
-import serenity1 from "../data assets/serenity1.png"
-import serenity2 from "../data assets/sereniyt2.jpg"
-import serenity3 from "../data assets/serenity3.jpg"
-import luckandlight from "../data assets/luckandlight.png"
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+import interstaller1 from "../manual database/id1-2.png"
+import interstaller2 from "../manual database/id1.png"
+
+import shimmerfly1 from "../manual database/id2-2.png"
+import shimmerfly2 from "../manual database/id2.png"
+import shimmerfly3 from "../manual database/id2-3.png"
+
+import independence1 from "../manual database/id3-3.png"
+import independence2 from "../manual database/id3-2.png"
+import independence3 from "../manual database/id3.jpg"
+
+import swanlight1 from "../manual database/id4-5.png"
+import swanlight2 from "../manual database/id4.png"
+import swanlight3 from "../manual database/id4-2.png"
+import swanlight4 from "../manual database/id4-3.png"
+import swanlight5 from "../manual database/id4-4.png"
+
+import elegance1 from "../manual database/id5.png"
+import elegance2 from "../manual database/id5-2.png"
+import elegance3 from "../manual database/id5-3.png"
+import elegance4 from "../manual database/id5-4.png"
+import elegance5 from "../manual database/id5-5.png"
+
+import luck1 from "../manual database/id6.png"
+import luck2 from "../manual database/id6-2.png"
+import luck3 from "../manual database/id6-3.png"
+
+import light from "../manual database/id7.png"
+
+import eleganceduo1 from "../manual database/id8.png"
+
+import wings1 from "../manual database/id9-3.png"
+import wings2 from "../manual database/id9.png"
+import wings3 from "../manual database/id9-2.png"
+
+import serenity1 from "../manual database/id10.jpg"
+import serenity2 from "../manual database/id10-3.png"
+import serenity3 from "../manual database/id10-2.jpg"
+import serenity4 from "../manual database/id10-4.png"
+
+// import luckandlight from "../manual database/id11.png"
 
 const ProductDetail = () => {
   const { id } = useParams()
@@ -42,17 +58,17 @@ const ProductDetail = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const productImages: Record<number, string[]> = {
-    1: [interstaller1, interstaller2,interstaller3],
-    2: [shimmerfly1, shimmerfly2],
-    3: [independence1, independence2],
-    4: [swanlight1, swanlight3],
-    5: [elegance1, elegance2, elegance3],
-    6: [luck],
+    1: [interstaller1, interstaller2],
+    2: [shimmerfly1, shimmerfly2,shimmerfly3],
+    3: [independence1, independence2,independence3],
+    4: [swanlight1,swanlight2,swanlight3,swanlight4,swanlight5],
+    5: [elegance1, elegance2, elegance3,elegance4,elegance5],
+    6: [luck1,luck2,luck3],
     7: [light],
-    8: [eleganceduo1, eleganceduo2],
+    8: [eleganceduo1],
     9: [wings1, wings2, wings3],
-    10: [serenity1, serenity2, serenity3],
-    11: [luckandlight ,luck, light]
+    10: [serenity1, serenity2, serenity3,serenity4],
+    11: [light,luck2]
   };
 
   useEffect(() => {
